@@ -1,4 +1,6 @@
-
+import HeadingArea from "./components/HeadingArea.jsx"
+import FoodList from "./components/FoodList.jsx"
+import FooterComp from "./components/FooterComp.jsx"
 import './App.css'
 
 const FoodData = [
@@ -133,7 +135,7 @@ function App() {
 
       <HeadingArea />
       
-      <FoodList />
+      <FoodList FoodData={FoodData} />
 
       <FooterComp />
 
@@ -142,49 +144,8 @@ function App() {
   )
 }
 
-function HeadingArea() {
-  return (
-    <div id='HeadingArea'>
-      <h1 id="Heading">My Food App</h1>
-      <p className='ourMenu'>Our Menu</p>
 
-      <p className='para'>Enjoy Karachi’s favorite meals delivered fast to your doorstep. From BBQ and biryani to burgers and desserts, order from top local restaurants with ease. Quick delivery, great taste, and amazing deals — all in one app!
-      </p>
-    </div>
-  )
-}
 
-function FoodList() {
-  return (
-    <div id="foodList">
-      {
-        FoodData.map(function (item) {
-          return (
-            <div id="foodItem">
-              <div id="foodImg">
-                <img src={item.img} alt="" />
-              </div>
-              <div id="foodDetails">
-                <h3>{item.name}</h3>
-                <p>{item.desc}</p>
-                <p>{item.quantity}</p>
-              </div>
-            </div>
-          )
-        })
-      }
 
-    </div>
-  )
-}
-
-function FooterComp() {
-  return (
-    <div id='Footer'>
-      <p>we are open since 2012 all right reserved</p>
-      <button>Order Now</button>
-    </div>
-  )
-}
 
 export default App
