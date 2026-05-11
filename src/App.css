@@ -52,3 +52,21 @@ color: rgb(221, 107, 13);
   flex-direction: column;
   justify-content:space-evenly;
 }
+
+#Footer{
+  padding: 25px 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+button{
+  background-color: rgb(221, 107, 13);
+  color: white;
+  font-style: 20px;
+  border: none;
+  padding: 10px 20px;
+  border-radius:20px;
+}
