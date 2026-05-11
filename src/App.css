@@ -1,59 +1,64 @@
-#Heading{
+#Heading {
   text-transform: uppercase;
   color: rgb(221, 107, 13);
   text-align: center;
 }
 
-#HeadingArea{
+#HeadingArea {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding: 30px 0px;
 }
 
-.ourMenu{
+.ourMenu {
   width: fit-content;
   text-align: center;
-  padding:10px;
+  padding: 10px;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
   margin: 0 auto;
 }
-.para{
-width: 50%;
-margin: 0 auto;
-text-align: center;
-color: rgb(221, 107, 13);
+
+.para {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(221, 107, 13);
 }
 
-#foodList{
+#foodList {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 1rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(4,280px);
+  gap: 1.5rem 1rem;
+  padding: 0px 60px;
+  justify-content: center;
 }
-#foodItem{
+
+#foodItem {
   display: flex;
   align-items: space-between;
   gap: 14px;
 }
-#foodImg{
-  height:100px;
+
+#foodImg {
+  height: 100px;
   width: 100px;
 }
-#foodImg img{
+
+#foodImg img {
   width: 100%;
   height: 100%;
-  object-fit:cover;
-}
-#foodDetails{
-  display: flex;
-  flex-direction: column;
-  justify-content:space-evenly;
+  object-fit: cover;
 }
 
-#Footer{
+#foodDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#Footer {
   padding: 25px 10px;
   display: flex;
   justify-content: center;
@@ -62,11 +67,38 @@ color: rgb(221, 107, 13);
   align-items: center;
 }
 
-button{
+button {
   background-color: rgb(221, 107, 13);
   color: white;
   font-style: 20px;
   border: none;
   padding: 10px 20px;
-  border-radius:20px;
+  border-radius: 20px;
+  transition: all 0.2s ;
+  &:hover{
+    cursor:not-allowed;
+    background-color: rgba(213, 106, 19, 0.782);
+  }
+}
+
+
+@media screen and (max-width:1200px) {
+  #foodList {
+    grid-template-columns: repeat(3, 300px);
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width:980px) {
+  #foodList {
+    grid-template-columns: repeat(2, 350px);
+      padding: 10px 60px;
+    }
+}
+
+@media screen and (max-width:750px) {
+  #foodList {
+    grid-template-columns: 400px;
+    row-gap: 2rem;
+  }
 }
